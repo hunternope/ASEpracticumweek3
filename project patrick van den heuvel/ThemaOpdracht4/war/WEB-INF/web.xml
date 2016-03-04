@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<servlet>
+		<servlet-name>AfspraakMakenServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.AfspraakMakenServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AfspraakMakenServlet</servlet-name>
+		<url-pattern>/AfspraakMaken.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TankenServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.TankenServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TankenServlet</servlet-name>
+		<url-pattern>/Tanken.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Login Servlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.LogServlet
+		</servlet-class>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>HU</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>HU</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login Servlet</servlet-name>
+		<url-pattern>/LogServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Register Servlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.RegistrerenServlet
+		</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>Register Servlet</servlet-name>
+		<url-pattern>/RegistrerenServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Logout Servlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.LogoutServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Logout Servlet</servlet-name>
+		<url-pattern>/LogoutServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Reserveren Servlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.ParkeerplaatsServlet
+		</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>Reserveren Servlet</servlet-name>
+		<url-pattern>/ParkeerplaatsServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>KlusAfvinkenServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.KlusAfvinkenServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>KlusAfvinkenServlet</servlet-name>
+		<url-pattern>/KlusAfvinkenServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>KlantVerwijderenServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.KlantVerwijderenServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>KlantVerwijderenServlet</servlet-name>
+		<url-pattern>/KlantVerwijderenServlet.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MedewerkerVerwijderenServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.MedewerkerVerwijderenServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MedewerkerVerwijderenServlet</servlet-name>
+		<url-pattern>/MedewerkerVerwijderenServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WijzigenKlantGegevensServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.WijzigenKlantGegevensServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WijzigenKlantGegevensServlet</servlet-name>
+		<url-pattern>/WijzigenKlantGegevensServlet.do</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>KlusVerwijderenServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.KlusVerwijderenServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>KlusVerwijderenServlet</servlet-name>
+		<url-pattern>/KlusVerwijderenServlet.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FactuurServlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.FactuurServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FactuurServlet</servlet-name>
+		<url-pattern>/FactuurServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Onderdeel Servlet</servlet-name>
+		<servlet-class>nl.themaopdracht4.servlets.OnderdeelServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Onderdeel Servlet</servlet-name>
+		<url-pattern>/OnderdeelServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- listeners -->
+
+	<listener>
+		<listener-class>nl.themaopdracht4.Listeners.MyServletContextListener
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>nl.themaopdracht4.Listeners.MyHttpSessionListener
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>nl.themaopdracht4.Listeners.MyHttpSessionAttributeListener
+		</listener-class>
+	</listener>
+
+	<!-- listeners -->
+
+	<!-- filters -->
+
+	<filter>
+		<filter-name>LoginSecurityFilter</filter-name>
+		<filter-class>nl.themaopdracht4.filters.LoginSecurityFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LoginSecurityFilter</filter-name>
+		<url-pattern>/web/secure/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>MedewerkerLoginSecurityFilter</filter-name>
+		<filter-class>nl.themaopdracht4.filters.MedewerkerLoginSecurityFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>MedewerkerLoginSecurityFilter</filter-name>
+		<url-pattern>/web/secure/medewerker/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>KlantLoginSecurityFilter</filter-name>
+		<filter-class>nl.themaopdracht4.filters.KlantLoginSecurityFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>KlantLoginSecurityFilter</filter-name>
+		<url-pattern>/web/secure/klant/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>BeheerderLoginSecurityFilter</filter-name>
+		<filter-class>nl.themaopdracht4.filters.BeheerderLoginSecurityFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>BeheerderLoginSecurityFilter</filter-name>
+		<url-pattern>/web/secure/beheerder/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<!-- filters -->
+
+</web-app>
+
+
+
+
+
+
+
+
