@@ -1,0 +1,14 @@
+table, td, th {
+	border: 2px solid green;
+	bored-collapse: separate;
+	border-spacing: 5px;
+	padding: 4px;
+}
+
+th {
+	background-color: green;
+	color: white;
+}
+
+/* table border='2' cellpadding='5' cellspacing='1'
+				bgcolor='lightgreen' bordercolor='blue'> */
